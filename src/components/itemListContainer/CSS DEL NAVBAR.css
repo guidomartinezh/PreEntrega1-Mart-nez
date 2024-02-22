@@ -5,11 +5,16 @@
   font-style: normal;
   font-variation-settings: "MORF" 15, "SHLN" 50;
   font-size: 40px !important;
+  background-color: blue;
 }
 
 .nav-bar {
-  background-color: rgb(255, 255, 255);
   color: rgb(239, 98, 23) !important;
   font-weight: 600;
   height: auto;
+  background-color: rgb(58, 105, 4);
+}
+
+.fa-lg {
+  color: rgb(239, 98, 23);
 }

@@ -6,7 +6,7 @@ import { Navbarr } from "./components/navbar/Navbar";
 import { ItemListContainer } from "./components/itemListContainer/ItemListContainer";
 import { ItemDetailsContainer } from "./components/itemDetailsContainer/ItemDetailsContainer";
 import { Cart } from "./components/cart/Cart";
-import { Footer } from "./components/footer/Footer";
+import { Footer } from "./components/footer/Footer.jsx";
 import { NotFound } from "./components/notFound/NotFound";
 import { CheckOut } from "./components/checkout/CheckOut";
 import { CarritoProvider } from "./context/CartContext.jsx";

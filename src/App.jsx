@@ -8,7 +8,7 @@ import { ItemDetailsContainer } from "./components/itemDetailsContainer/ItemDeta
 import { Cart } from "./components/cart/Cart.jsx";
 import { Footer } from "./components/footer/Footer.jsx";
 import { NotFound } from "./components/notFound/NotFound.jsx";
-import { CheckOut } from "./components/checkout/CheckOut.jsx";
+import { CheckOut } from "./components/checkOut/CheckOut.jsx";
 import { CarritoProvider } from "./context/CartContext.jsx";
 import { ToastContainer } from "react-toastify";
 

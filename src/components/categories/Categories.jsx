@@ -5,34 +5,38 @@ import { CartWidget } from "../cartWidget/CartWidget";
 export default function Categories() {
   return (
     <>
-      <Link to={"/"}>
-        <li
-          expand="lg"
-          href=""
-          style={{ fontFamily: "Arial, sans-serif", color: "black" }}
+      <li>
+        <Link
+          to={"/"}
+          className="text-black px-4 py-2 rounded-full flex items-center hover:bg-yellow-200"
         >
           home
-        </li>
-      </Link>
-      <Link to={"/category/travel"}>
-        <li
-          expand="lg"
-          href=""
-          style={{ fontFamily: "Arial, sans-serif", color: "black" }}
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/category/travel"}
+          className="text-black px-4 py-2 rounded-full flex items-center hover:bg-yellow-200"
         >
           travel
-        </li>
-      </Link>
-      <Link to={"/category/office"}>
-        <li href="" style={{ fontFamily: "Arial, sans-serif", color: "black" }}>
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"/category/office"}
+          className="text-black px-4 py-2 rounded-full flex items-center hover:bg-yellow-200"
+        >
           office
-        </li>
-      </Link>
-      <Link to={"./category/apparel"}>
-        <li href="" style={{ fontFamily: "Arial, sans-serif", color: "black" }}>
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={"./category/apparel"}
+          className="text-black px-4 py-2 rounded-full flex items-center hover:bg-yellow-200"
+        >
           apparel
-        </li>
-      </Link>
+        </Link>
+      </li>
       <CartWidget />
     </>
   );

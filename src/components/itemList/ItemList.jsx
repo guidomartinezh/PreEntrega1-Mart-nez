@@ -1,16 +1,12 @@
-import React from "react";
 import Item from "../item/Item";
+import { ItemCart } from "../itemCart/ItemCart";
 
-export default function ItemList({ products }) {
-  if (products.length > 0) {
-    return (
-      <>
-        {products.map((prod) => (
-          <Item product={prod} />
-        ))}
-      </>
-    );
-  } else {
-    return <p>Sorry, products not available.</p>;
-  }
-}
+export const ItemList = ({ products, plantilla }) => {
+  return (
+    <>
+      {plantilla === "Item"
+        ? products.map((prod) => <Item key={prod.id} product={prod} />)
+        : products.map((prod) => <ItemCart key={prod.id} product={prod} />)}
+    </>
+  );
+};

@@ -1,4 +1,6 @@
 import * as React from "react";
+import "react-toastify/dist/ReactToastify.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navbarr } from "./components/navbar/Navbar";
 import { ItemListContainer } from "./components/itemListContainer/ItemListContainer";
@@ -6,28 +8,17 @@ import { ItemDetailsContainer } from "./components/itemDetailsContainer/ItemDeta
 import { Cart } from "./components/cart/Cart";
 import { Footer } from "./components/Footer/Footer";
 import { NotFound } from "./components/notFound/NotFound";
-import { CheckOut } from "./components/checkOut/CheckOut";
-
-import {
-  ChakraBaseProvider,
-  extendBaseTheme,
-  theme as chakraTheme,
-} from "@chakra-ui/react";
-
-const { Button } = chakraTheme.components;
-
-const theme = extendBaseTheme({
-  components: {
-    Button,
-  },
-});
+import { CheckOut } from "./components/checkout/CheckOut";
+import { CarritoProvider } from "./context/CartContext.jsx";
+import { ToastContainer } from "react-toastify";
 
 export const App = () => {
   return (
     <>
-      <ChakraBaseProvider theme={theme}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <CarritoProvider>
           <Navbarr />
+          <ToastContainer />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:cid" element={<ItemListContainer />} />
@@ -36,9 +27,9 @@ export const App = () => {
             <Route path="/checkout" element={<CheckOut />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
-        </BrowserRouter>
-      </ChakraBaseProvider>
+        </CarritoProvider>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 };
